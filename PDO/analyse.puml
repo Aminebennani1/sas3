@@ -2,6 +2,8 @@
 
 left to right direction
 actor "Admin" as admin
+actor "reader" as reader
+
 
 package "Library Management System" {
   usecase "Create Book" as UC1
@@ -11,10 +13,16 @@ package "Library Management System" {
   usecase "loans Book" as UC5
   
 }
+package "Library Management System" {
+  usecase "display Books" as UC7
+  
+}
+
 
 admin -- UC1
 admin -- UC2
 admin -- UC3
 admin -- UC4
 admin -- UC5
+reader -- UC7
 @enduml
